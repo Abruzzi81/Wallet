@@ -8,12 +8,13 @@
     /* --- GLOWNE KOLORY --- */
     --color-primary: #00F0FF;
     --color-secondary: #0F141B;
+    --color-tertiary: #3B494B;
 
     --color-surface: #0D1117;
 
 
     /* --- TEXT --- */
-    --text-main: #00F0FF;
+    --text-primary: #00F0FF;
     --text-secondary: #DEE2EC;
     --text-muted: #B9CACB;
     --text-tertiary: #849495;
