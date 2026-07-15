@@ -15,18 +15,23 @@
     --color-component-background: #161B2270;
     --color-component-border: #30363D;
 
+    --button-disabled: #252A32;
+
 
     /* --- TEXT --- */
     --text-primary: #00F0FF;
     --text-secondary: #DEE2EC;
-    --text-muted: #B9CACB;
     --text-tertiary: #849495;
+
+    --text-muted: #B9CACB;
+    --text-button-enabled: #006970;
 
     --text-profit: #00E475;
     --text-loss: #ea4b38;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }

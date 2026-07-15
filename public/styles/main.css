@@ -87,7 +87,7 @@
 }
 
 .sidebar_nav_item.active {
-    background-color: #252A32;
+    background-color: var(--button-disabled);
     border-right: 3px solid var(--color-primary);
 
     color: var(--text-primary);

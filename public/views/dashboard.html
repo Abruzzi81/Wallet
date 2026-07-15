@@ -35,9 +35,69 @@
                 </div>
 
                 <div class="center">
-                    <div class="chart"></div>
+                    <div class="main_chart">
+                        <div class="margin">
+                            <div class="chart_info">
+                                <div class="title">Wzrost Portfela</div>
+                                <div class="subtitle">Analiza historyczna aktywów</div>
+                            </div>
+                            <div class="time_scope_buttons_panel">
+                                <button class="time_scope_btn" aria-pressed="false" onclick="setActiveButton(this)">
+                                    1D
+                                </button>
+                                <button class="time_scope_btn" aria-pressed="false" onclick="setActiveButton(this)">
+                                    1W
+                                </button>
+                                <button class="time_scope_btn" aria-pressed="false" onclick="setActiveButton(this)">
+                                    1M
+                                </button>
+                                <button class="time_scope_btn" aria-pressed="false" onclick="setActiveButton(this)">
+                                    1Y
+                                </button>
+                                <button class="time_scope_btn" aria-pressed="false" onclick="setActiveButton(this)">
+                                    ALL
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chart">
+
+                        </div>
+                    </div>
                     <div class="diversification_area">
-                        <div class="donut_chart"></div>
+                        <div class="donut_chart_card">
+                            <div class="heading">Alokacja Aktywów</div>
+                            <div class="donut_chart">O</div>
+                            <div class="assets">
+                                <div class="single_asset stocks">
+                                    <div class="name">
+                                        <span class="dot"></span>
+                                        <span class="text">Akcje</span>
+                                    </div>
+                                    <div class="text">45%</div>
+                                </div>
+                                <div class="single_asset crypto">
+                                    <div class="name">
+                                        <span class="dot"></span>
+                                        <span class="text">Kryptowaluty</span>
+                                    </div>
+                                    <div class="text">25%</div>
+                                </div>
+                                <div class="single_asset cash">
+                                    <div class="name">
+                                        <span class="dot"></span>
+                                        <span class="text">Gotówka</span>
+                                    </div>
+                                    <div class="text">15%</div>
+                                </div>
+                                <div class="single_asset metals">
+                                    <div class="name">
+                                        <span class="dot"></span>
+                                        <span class="text">Metale</span>
+                                    </div>
+                                    <div class="text">15%</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="market_status"></div>
                     </div>
                 </div>
@@ -46,6 +106,7 @@
 
     </div>
     <script src="/public/scripts/active_sidebar.js"></script>
+    <script src="/public/scripts/dashboard.js"></script>
 </body>
 
 </html>

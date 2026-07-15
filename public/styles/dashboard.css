@@ -1,4 +1,3 @@
-
 .main_content {
     display: flex;
     flex-direction: column;
@@ -8,8 +7,10 @@
     gap: 40px;
 }
 
+/* ============================================================== */
+/* =======================  SUMMARY GRID  ======================= */
+/* ============================================================== */
 
-/* ======================== SUMMARY GRID ======================== */
 
 .summary_grid {
     display: flex;
@@ -27,19 +28,23 @@
     padding: 24px;
     gap: 16px;
     background-color: var(--color-component-background);
-    -webkit-backdrop-filter: blur(10px); /* Wsparcie dla Safari */
+    -webkit-backdrop-filter: blur(10px);
+    /* Wsparcie dla Safari */
     backdrop-filter: blur(10px);
     border: 1px solid var(--color-component-border);
+
 }
 
 .summary_card .title {
     color: var(--text-tertiary);
     font-size: 16px;
+    letter-spacing: 2px;
 }
 
 .summary_card .content {
     font-size: 32px;
     font-weight: 500;
+    letter-spacing: 2px;
 }
 
 .summary_card.total_value {
@@ -55,7 +60,9 @@
 }
 
 
-/* ======================== CHART ======================== */
+/* ============================================================== */
+/* =======================  CENTER ============================== */
+/* ============================================================== */
 
 .center {
     display: flex;
@@ -65,14 +72,103 @@
     gap: 40px;
 }
 
-.chart {
+/* ------------------------  main chart ------------------------ */
+
+.main_chart {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
+    padding: 32px;
     background-color: var(--color-component-background);
     border: 1px solid var(--color-component-border);
+    gap: 40px;
 }
+
+.margin {
+    display: flex;
+    flex-direction: row;
+    height: 48px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.chart_info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: max-content;
+
+    gap: 4px;
+}
+
+.chart_info .title {
+    color: var(--text-secondary);
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.chart_info .subtitle {
+    color: var(--text-tertiary);
+    font-size: 14px;
+}
+
+.time_scope_buttons_panel {
+    display: flex;
+    flex-direction: row;
+    height: 34px;
+    width: max-content;
+    padding: 4px;
+    align-items: center;
+    background-color: var(--button-disabled);
+    border: 1px solid var(--color-component-border);
+}
+
+.time_scope_btn {
+    /* Reset domyślnych stylów przeglądarki */
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: inherit;
+
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 24px;
+    width: 42px;
+    padding: 4px 12px;
+    border-radius: 2px;
+
+    cursor: pointer;
+    user-select: none;
+
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 400;
+
+    transition: all 0.15s ease;
+}
+
+.time_scope_btn:hover {
+    background-color: var(--color-tertiary);
+}
+
+.time_scope_btn.is-active {
+    background-color: var(--color-primary);
+    color: var(--text-button-enabled);
+}
+
+.chart {
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--button-disabled);
+}
+
+/* ------------------------  diversification area ------------------------ */
 
 .diversification_area {
     display: flex;
@@ -82,12 +178,89 @@
     gap: 24px;
 }
 
-.donut_chart {
+.donut_chart_card {
     flex: 2;
     display: flex;
     flex-direction: column;
+    padding: 40px;
+    gap: 10px;
     background-color: var(--color-component-background);
     border: 1px solid var(--color-component-border);
+}
+
+.heading {
+    width: 100%;
+    height: fit-content;
+
+    color: var(--text-secondary);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.donut_chart {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-primary);
+    font-size: 108px;
+    font-weight: 1000;
+}
+
+.assets {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    gap: 12px;
+}
+
+.single_asset {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    width: 100%;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: fit-content;
+    gap: 10px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.text {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.single_asset.stocks .dot {
+    background-color: aqua;
+}
+
+.single_asset.crypto .dot {
+    background-color: greenyellow;
+}
+
+.single_asset.cash .dot {
+    background-color: palevioletred;
+}
+
+.single_asset.metals .dot {
+    background-color: yellow;
 }
 
 .market_status {
