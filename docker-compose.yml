@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: docker/nginx/Dockerfile
     ports:
-      - "8080:80"
+      - "8081:80"
     volumes:
       - .:/app/
     links:
@@ -19,11 +19,11 @@ services:
       context: .
       dockerfile: docker/db/Dockerfile
     ports:
-      - "5433:5432"
+      - "5434:5432"
     networks:
       - pg-network
     volumes:
-      - pg-data:/var/lib/postgresql
+      - pg-data-wallet:/var/lib/postgresql
   
   php:
     build:
@@ -34,14 +34,14 @@ services:
     networks:
       - pg-network
   
-  pgadmin-math_travel:
+  pgadmin-wallet:
     image: dpage/pgadmin4:latest
-    container_name: pg-admin2
+    container_name: pg-admin-wallet
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@example.com
       PGADMIN_DEFAULT_PASSWORD: admin
     ports:
-      - "5050:80"
+      - "5051:80"
     networks:
       - pg-network
   
@@ -49,4 +49,4 @@ networks:
   pg-network:
 
 volumes:
-  pg-data:
+  pg-data-wallet:

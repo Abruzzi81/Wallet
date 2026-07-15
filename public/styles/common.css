@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* --- GLOWNE KOLORY --- */
+    --color-primary: #00F0FF;
+    --color-secondary: #0F141B;
+
+    --color-surface: #0D1117;
+
+
+    /* --- TEXT --- */
+    --text-main: #00F0FF;
+    --text-secondary: #DEE2EC;
+    --text-muted: #B9CACB;
+    --text-tertiary: #849495;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}

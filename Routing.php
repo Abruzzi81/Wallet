@@ -2,6 +2,10 @@
 
 // Rejestrujemy tylko dwa podstawowe kontrolery na start
 require_once 'src/controllers/DashboardController.php';
+require_once 'src/controllers/PortfolioController.php';
+require_once 'src/controllers/AnalysisController.php';
+require_once 'src/controllers/SettingsController.php';
+
 
 class Routing
 {
@@ -14,7 +18,20 @@ class Routing
         "dashboard" => [
             "controller" => "DashboardController",
             "action" => "index"
-        ]
+        ],
+        "portfolio" => [
+            "controller" => "PortfolioController",
+            "action" => "index"
+        ],
+        "analysis" => [
+            "controller" => "AnalysisController",
+            "action" => "index"
+        ],
+        "settings" => [
+            "controller" => "SettingsController",
+            "action" => "index"
+        ],
+
     ];
 
     // SINGLETON - Tablica przechowująca już utworzone instancje kontrolerów
