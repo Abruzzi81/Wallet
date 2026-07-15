@@ -12,12 +12,18 @@
 
     --color-surface: #0D1117;
 
+    --color-component-background: #161B2270;
+    --color-component-border: #30363D;
+
 
     /* --- TEXT --- */
     --text-primary: #00F0FF;
     --text-secondary: #DEE2EC;
     --text-muted: #B9CACB;
     --text-tertiary: #849495;
+
+    --text-profit: #00E475;
+    --text-loss: #ea4b38;
 }
 
 html, body {

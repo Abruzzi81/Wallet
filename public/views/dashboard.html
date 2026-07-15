@@ -6,7 +6,7 @@
 
     <title>Index</title>
 
-    <link rel="stylesheet" type="text/css" href="/public/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/public/styles/dashboard.css">
 </head>
 
 <body>
@@ -19,7 +19,28 @@
             <?php include __DIR__ . '/partials/topbar.html'; ?>
 
             <main class="main_content">
-                <div class="main_content_title">Profil</div>
+                <div class="summary_grid">
+                    <div class="summary_card total_value">
+                        <div class="title">Całkowita wartość</div>
+                        <div class="content">120,000.55 PLN</div>
+                    </div>
+                    <div class="summary_card profit">
+                        <div class="title">Zysk/Strata</div>
+                        <div class="content">+5,000.55 PLN</div>
+                    </div>
+                    <div class="summary_card best_asset">
+                        <div class="title">Najlepsze aktywo</div>
+                        <div class="content">NVIDIA</div>
+                    </div>
+                </div>
+
+                <div class="center">
+                    <div class="chart"></div>
+                    <div class="diversification_area">
+                        <div class="donut_chart"></div>
+                        <div class="market_status"></div>
+                    </div>
+                </div>
             </main>
         </div>
 
