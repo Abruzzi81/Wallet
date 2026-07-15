@@ -12,7 +12,7 @@ class AppController {
         return $_SERVER["REQUEST_METHOD"] === 'POST';
     }
  
-    protected function render(string $template = null)
+    protected function render(string $template = null, array $variables = [])
     {
         // 1. Budujemy poprawne ścieżki do plików .html
         $templatePath = __DIR__ . '/../../public/views/'. $template.'.html';
