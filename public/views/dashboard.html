@@ -17,7 +17,6 @@
 
         <div class="main_container_right">
             <?php include __DIR__ . '/partials/topbar.html'; ?>
-
             <main class="main_content">
                 <div class="summary_grid">
                     <div class="summary_card total_value">
@@ -42,7 +41,7 @@
                                 <div class="subtitle">Analiza historyczna aktywów</div>
                             </div>
                             <div class="time_scope_buttons_panel">
-                                <button class="time_scope_btn" aria-pressed="false" onclick="setActiveButton(this)">
+                                <button class="time_scope_btn is-active" aria-pressed="true" onclick="setActiveButton(this)">
                                     1D
                                 </button>
                                 <button class="time_scope_btn" aria-pressed="false" onclick="setActiveButton(this)">
@@ -98,7 +97,23 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="market_status"></div>
+                        <div class="market_status">
+                            <span class="title">STATUS RYNKU</span>
+                            <div class="markets">
+                                <div class="single_market">
+                                    <span class="name">WIG20</span>
+                                    <span class="percentage">+1.42%</span>
+                                </div>
+                                <div class="single_market">
+                                    <span class="name">S&P 500</span>
+                                    <span class="percentage">-1.02%</span>
+                                </div>
+                                <div class="single_market">
+                                    <span class="name">Bitcoin</span>
+                                    <span class="percentage">+10.02%</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>

@@ -6,7 +6,7 @@
 
     <title>Index</title>
 
-    <link rel="stylesheet" type="text/css" href="/public/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/public/styles/portfolio.css">
 </head>
 
 <body>
@@ -18,13 +18,113 @@
         <div class="main_container_right">
             <?php include __DIR__ . '/partials/topbar.html'; ?>
 
-            <main class="main_content">
-                <div class="main_content_title">Portfel</div>
-            </main>
+            <main>
+                    <div class="main_content">
+                        <div class="category_filter">
+                            <button class="filter_btn is-active" aria-pressed="true" onclick="setActiveButton(this)">
+                                Wszystko
+                            </button>
+                            <button class="filter_btn" aria-pressed="false" onclick="setActiveButton(this)">
+                                Akcje
+                            </button>
+                            <button class="filter_btn" aria-pressed="false" onclick="setActiveButton(this)">
+                                Krypto
+                            </button>
+                            <button class="filter_btn" aria-pressed="false" onclick="setActiveButton(this)">
+                                ETF
+                            </button>
+                            <button class="filter_btn" aria-pressed="false" onclick="setActiveButton(this)">
+                                Waluty
+                            </button>
+                        </div>
+                        <div class="table_container">
+                            <table class="assets_table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">AKTYWO</th>
+                                        <th scope="col" class="text-right">ILOŚĆ</th>
+                                        <th scope="col" class="text-right">ŚR. KUPNO</th>
+                                        <th scope="col" class="text-right">CENA</th>
+                                        <th scope="col" class="text-right">WARTOŚĆ RYNKOWA</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="asset_name">
+                                                <img src="/public/assets/images/brands_logo/apple_logo.png" alt="apple"
+                                                    class="asset_logo">
+                                                <strong>Apple</strong>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">15.4</td>
+                                        <td class="text-right">$170.00</td>
+                                        <td class="text-right">$182.50</td>
+                                        <td class="text-right">11,240 PLN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="asset_name">
+                                                <img src="/public/assets/images/brands_logo/apple_logo.png" alt="apple"
+                                                    class="asset_logo">
+                                                <strong>ETHEREUM</strong>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">15.4</td>
+                                        <td class="text-right">$170.00</td>
+                                        <td class="text-right">$182.50</td>
+                                        <td class="text-right">11,240 PLN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="asset_name">
+                                                <img src="/public/assets/images/brands_logo/apple_logo.png" alt="apple"
+                                                    class="asset_logo">
+                                                <strong>BITCOIN</strong>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">15.4</td>
+                                        <td class="text-right">$170.00</td>
+                                        <td class="text-right">$182.50</td>
+                                        <td class="text-right">11,240 PLN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="asset_name">
+                                                <img src="/public/assets/images/brands_logo/apple_logo.png" alt="apple"
+                                                    class="asset_logo">
+                                                <strong>S&P 500</strong>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">15.4</td>
+                                        <td class="text-right">$170.00</td>
+                                        <td class="text-right">$182.50</td>
+                                        <td class="text-right">11,240 PLN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="asset_name">
+                                                <img src="/public/assets/images/brands_logo/apple_logo.png" alt="apple"
+                                                    class="asset_logo">
+                                                <strong>TESLA</strong>
+                                            </div>
+                                        </td>
+                                        <td class="text-right">15.4</td>
+                                        <td class="text-right">$170.00</td>
+                                        <td class="text-right">$182.50</td>
+                                        <td class="text-right">11,240 PLN</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </main>
+
         </div>
 
     </div>
     <script src="/public/scripts/active_sidebar.js"></script>
+    <script src="/public/scripts/portfolio.js"></script>
 </body>
 
 </html>

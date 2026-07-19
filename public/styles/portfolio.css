@@ -1,0 +1,152 @@
+/* ============================================================== */
+/* =======================  TABLE =============================== */
+/* ============================================================== */
+
+.main_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+    padding: 40px;
+}
+
+/* ------------------------  category_filter ------------------------ */
+
+.category_filter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: fit-content;
+    width: 100%;
+    gap: 12px;
+    align-items: center;
+}
+
+.filter_btn {
+    /* Reset domyślnych stylów przeglądarki */
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: inherit;
+
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    padding: 8px 24px;
+    border-radius: 12px;
+    background-color: var(--button-disabled);
+
+    cursor: pointer;
+    user-select: none;
+
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 400;
+
+    transition: all 0.15s ease;
+}
+
+.filter_btn:hover {
+    background-color: var(--color-tertiary);
+}
+
+.filter_btn.is-active {
+    background-color: var(--color-primary);
+    color: var(--text-button-enabled);
+}
+
+
+/* ------------------------  table ------------------------ */
+
+.table_container {
+    width: 100%;
+    border: 1px solid var(--color-component-border);
+    border-radius: 12px;
+    overflow-y: hidden;
+    /* Obcina ostre rogi tabeli wewnątrz */
+}
+
+.assets_table {
+    width: 100%;
+
+    border-collapse: collapse;
+    /* Łączy podwójne linie obramowania w jedną */
+    table-layout: fixed;
+    /* Idealny, równy podział kolumn */
+    font-size: 14px;
+    text-align: left;
+
+    min-width: 700px;
+}
+
+.assets_table thead {
+    background-color: var(--button-disabled);
+    color: var(--text-tertiary);
+}
+
+.assets_table tbody {
+    background-color: var(--color-component-background);
+    color: var(--text-secondary);
+}
+
+/* BAZOWY PADDING (Góra/Dół), boki zerujemy, bo ustawiamy je precyzyjnie niżej */
+.assets_table th {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.assets_table td {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--color-component-border);
+}
+
+/* ŚRODKOWE KOLUMNY (Domyślny bezpieczny odstęp z lewej strony) */
+.assets_table th,
+.assets_table td {
+    padding-left: 24px;
+    padding-right: 0;
+}
+
+/* PIERWSZA KOLUMNA (Większy odstęp od lewej krawędzi tabeli) */
+.assets_table th:first-child,
+.assets_table td:first-child {
+    min-width: 160px;
+    /* Zabezpieczenie przed ucinaniem nazw */
+    padding-left: 40px;
+}
+
+/* OSTATNIA KOLUMNA (Większy odstęp od prawej krawędzi tabeli) */
+.assets_table th:last-child,
+.assets_table td:last-child {
+    padding-right: 40px;
+}
+
+.assets_table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.asset_name {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    gap: 12px;
+}
+
+.asset_logo {
+    width: 26px;
+    height: 26px;
+}
+
+/* KOLUMNY FINANSOWE */
+.text-right {
+    text-align: right;
+    white-space: nowrap;
+    padding-left: 24px;
+    min-width: 110px;
+    /* Bezpieczna szerokość dla dużych kwot */
+}
