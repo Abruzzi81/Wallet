@@ -17,23 +17,24 @@
 
         <div class="main_container_right">
             <?php include __DIR__ . '/partials/topbar.html'; ?>
-            <main class="main_content">
-                <div class="summary_grid">
-                    <div class="summary_card total_value">
-                        <div class="title">Całkowita wartość</div>
-                        <div class="content">120,000.55 PLN</div>
-                    </div>
-                    <div class="summary_card profit">
-                        <div class="title">Zysk/Strata</div>
-                        <div class="content">+5,000.55 PLN</div>
-                    </div>
-                    <div class="summary_card best_asset">
-                        <div class="title">Najlepsze aktywo</div>
-                        <div class="content">NVIDIA</div>
-                    </div>
-                </div>
 
-                <div class="center">
+            <main class="main_content">
+                <div class="left_side">
+
+                    <div class="summary_grid">
+                        <div class="summary_card total_value">
+                            <div class="title">Całkowita wartość</div>
+                            <div class="content">120,000.55 PLN</div>
+                        </div>
+                        <div class="summary_card profit">
+                            <div class="title">Zysk/Strata</div>
+                            <div class="content">+5,000.55 PLN</div>
+                        </div>
+                        <div class="summary_card best_asset">
+                            <div class="title">Najlepsze aktywo</div>
+                            <div class="content">NVIDIA</div>
+                        </div>
+                    </div>
                     <div class="main_chart">
                         <div class="margin">
                             <div class="chart_info">
@@ -41,7 +42,8 @@
                                 <div class="subtitle">Analiza historyczna aktywów</div>
                             </div>
                             <div class="time_scope_buttons_panel">
-                                <button class="time_scope_btn is-active" aria-pressed="true" onclick="setActiveButton(this)">
+                                <button class="time_scope_btn is-active" aria-pressed="true"
+                                    onclick="setActiveButton(this)">
                                     1D
                                 </button>
                                 <button class="time_scope_btn" aria-pressed="false" onclick="setActiveButton(this)">
@@ -59,9 +61,13 @@
                             </div>
                         </div>
                         <div class="chart">
-
+                            
                         </div>
                     </div>
+                </div>
+
+
+                <div class="center">
                     <div class="diversification_area">
                         <div class="donut_chart_card">
                             <div class="heading">Alokacja Aktywów</div>

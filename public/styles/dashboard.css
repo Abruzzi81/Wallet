@@ -1,11 +1,19 @@
 .main_content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     flex-grow: 1;
     min-height: 0;
     padding: 40px 60px;
     gap: 40px;
+}
+
+
+.left_side {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 
 /* ============================================================== */
@@ -16,8 +24,10 @@
 .summary_grid {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     width: 100%;
-    height: 12vh;
+    height: 150px;
     gap: 24px;
 }
 
@@ -25,6 +35,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     height: 100%;
     padding: 24px 34px;
     gap: 16px;
@@ -79,6 +90,7 @@
 .main_chart {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     height: 100%;
     width: 100%;
     padding: 32px;
